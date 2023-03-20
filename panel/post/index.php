@@ -40,7 +40,7 @@ require_once('../../functions/helpers.php');
                                     <th>#</th>
                                     <th>image</th>
                                     <th>title</th>
-                                    <th>cat_id</th>
+                                    <th>category</th>
                                     <th>body</th>
                                     <th>status</th>
                                     <th>setting</th>
@@ -50,7 +50,8 @@ require_once('../../functions/helpers.php');
                             <tbody>
                                 <?php
                                 global $pdo;
-                                $query = "SELECT * FROM php_project.posts";
+                                $query = "SELECT php_project.posts.*,php_project.categories.name AS category_name  FROM php_project.posts
+                                LEFT JOIN php_project.categories ON php_project.posts.cat_id =php_project.categories.id;";
                                 $statement = $pdo->prepare($query);
                                 $statement->execute();
                                 $posts = $statement->fetchall();
@@ -64,7 +65,7 @@ require_once('../../functions/helpers.php');
                                             <?= $post->title ?>
                                         </td>
                                         <td>
-                                            <?= $post->cat_id ?>
+                                            <?= $post->category_name ?>
                                         </td>
                                         <td>
                                             <?= substr(
