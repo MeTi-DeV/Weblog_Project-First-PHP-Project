@@ -1,3 +1,4 @@
 {
-    "workbench.colorTheme": "Bearded Theme HC Ebony"
+    "workbench.colorTheme": "Bearded Theme HC Ebony",
+    "php-cs-fixer.formatHtml": true
 }

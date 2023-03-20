@@ -20,13 +20,13 @@ require_once '../../functions/pdo_connection.php';
         <section class="container-fluid">
             <section class="row">
                 <section class="col-md-2 p-0">
-                    <?php require_once('../layouts/sidebar.php')?>
+                    <?php require_once('../layouts/sidebar.php') ?>
                 </section>
                 <section class="col-md-10 pt-3">
 
                     <section class="mb-2 d-flex justify-content-between align-items-center">
                         <h2 class="h4">Categories</h2>
-                        <a href="<?= url('panel/category/create.php')?>" class="btn btn-sm btn-success">Create</a>
+                        <a href="<?= url('panel/category/create.php') ?>" class="btn btn-sm btn-success">Create</a>
                     </section>
 
                     <section class="table-responsive">
@@ -57,7 +57,8 @@ require_once '../../functions/pdo_connection.php';
                                         </td>
                                         <td>
                                             <a href="" class="btn btn-info btn-sm">Edit</a>
-                                            <a href="" class="btn btn-danger btn-sm">Delete</a>
+                                            <a href="<?= url('panel/category/delete.php?cat_id=') . $category->id ?>"
+                                                class="btn btn-danger btn-sm">Delete</a>
                                         </td>
                                     </tr>
 
