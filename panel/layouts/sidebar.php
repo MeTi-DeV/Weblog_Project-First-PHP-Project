@@ -8,6 +8,6 @@
         <a href="<?= url('panel/category') ?>">category</a>
     </section>
     <section class="sidebar-link">
-        <a href="<?= url('panle/post') ?>">post</a>
+        <a href="<?= url('panel/post') ?>">post</a>
     </section>
 </section>
