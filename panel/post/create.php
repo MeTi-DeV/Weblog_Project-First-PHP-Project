@@ -23,12 +23,11 @@ if (
 
     if ($category !== false && $image_upload !== false) {
         global $pdo;
-        $query = 'INSERT INTO php_project.categories SET title= ? ,body= ? , cat_id= ? ,image= ? , create_at=NOW();';
+        $query = 'INSERT INTO php_project.posts SET title= ? ,body= ? , cat_id= ? ,image= ? , created_at=NOW();';
         $statement = $pdo->prepare($query);
-        $statement->execute([$_POST['title'], $_POST['body'], $_POST['cat_id'], $_POST['image']]);
-        redirect('panel/category');
+        $statement->execute([$_POST['title'], $_POST['body'], $_POST['cat_id'], $image]);
     }
-redirect('panel/post');
+    redirect('panel/post');
 }
 ?>
 <!DOCTYPE html>
@@ -54,7 +53,7 @@ redirect('panel/post');
                 </section>
                 <section class="col-md-10 pt-3">
 
-                    <form action="<?= url('panel/post/create') ?>" method="post" enctype="multipart/form-data">
+                    <form action="<?= url('panel/post/create.php') ?>" method="post" enctype="multipart/form-data">
                         <section class="form-group">
                             <label for="title">Title</label>
                             <input type="text" class="form-control" name="title" id="title" placeholder="title ...">
