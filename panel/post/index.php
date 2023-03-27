@@ -90,7 +90,8 @@ require_once('../../functions/helpers.php');
                                         </td>
                                         <td>
                                             <a href="" class="btn btn-warning btn-sm">Change status</a>
-                                            <a href="" class="btn btn-info btn-sm">Edit</a>
+                                            <a href="<?= url('panel/post/edit.php?post_id=' . $post->id) ?>"
+                                                class="btn btn-info btn-sm">Edit</a>
                                             <a href="" class="btn btn-danger btn-sm">Delete</a>
                                         </td>
                                     </tr>
