@@ -70,7 +70,7 @@ if (
                     </section>
                     <section class="mt-4 mb-2 d-flex justify-content-between">
                         <input type="submit" class="btn btn-success btn-sm" value="login">
-                        <a class="" href="">register</a>
+                        <a class="" href="<?= url('auth/register.php') ?>">register</a>
                     </section>
                 </form>
             </section>
