@@ -37,7 +37,9 @@ require_once('functions/pdo_connection.php');
                         <p>
                             <?= substr($post->body, 0, 30) ?> ...
                         </p>
-                        <p><a class="btn btn-primary" href="" role="button">View details »</a></p>
+                        <p><a class="btn btn-primary" href="<?= url('detail.php?post_id=' . $post->id) ?>"
+                                role="button">View
+                                details »</a></p>
                     </section>
                     <?php
                 }
