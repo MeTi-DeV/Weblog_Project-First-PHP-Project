@@ -48,7 +48,6 @@ require_once('functions/pdo_connection.php');
 
             </section>
         </section>
-
     </section>
     <script src="<?= asset('assets/js/jquery.min.js') ?>"></script>
     <script src="<?= asset('assets/js/bootstrap.min.js') ?>"></script>
